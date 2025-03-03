@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .paraga{
+            color: blueviolet;
+            text-align: center;
+            background-color: black;
+        }
+        .div1{
+            background-color: bisque;
+        }
+        h1{
+            color:rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+    <!-- Creating adding setting  HTML elements  -->
+     <div id="div1">
+        <p id="pp"> hell thsi is my web site</p>
+        <h1 id="hh">heading tyag</h1>
+     </div>
+     <script>  
+        let element=document.createElement('p')
+        element.innerHTML='<p> fuck you </p>'
+        let parent=document.getElementById('div1')
+        parent.appendChild(element);
+        console.log(parent) 
+        // replacing  html elements 
+        let repace=document.getElementById('pp')
+        repace.replaceWith(element)
+
+        //Getting and setting Attributes
+        let atr=document.getElementById('hh');
+         atr.setAttribute("class","paraga")
+     
+
+
+     </script>
+</body>
+</html>

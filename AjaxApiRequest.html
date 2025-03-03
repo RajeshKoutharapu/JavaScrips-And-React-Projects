@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <style>
+      div {
+         text-align: center;
+      }
+      button {
+         width: 100px;
+         height: 30px;
+      }
+   </style>
+</head>
+<body>
+   <div id="div"> 
+      <button id="btn">Click</button>
+   </div>
+</body>
+<script>
+   let parent = document.getElementById('div'); // Fixed typo
+   let btn = document.getElementById('btn');
+   btn.addEventListener('click', loadflag);
+
+   function loadflag() {
+      let req = new XMLHttpRequest();
+      req.open('GET', 'https://restcountries.com/v3.1/name/india', true);
+      req.send();
+
+      req.onload = function () {
+         let result = JSON.parse(req.responseText);
+         parent.innerHTML += `<img src="${result[0].flags.png}" alt="India Flag">`; // Corrected template literal
+      };
+
+      req.onprogress = function () {
+         let d = document.createElement('p');
+         d.innerText = "Loading...";
+         parent.appendChild(d);
+      };
+   }
+</script>
+</html>

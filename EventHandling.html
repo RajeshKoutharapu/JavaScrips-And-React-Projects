@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login{
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            width: 300px;
+            height: 350px;
+            align-items: center;
+            border-style:solid;
+            border-color: red;
+           
+        }
+        input{
+            margin-bottom: 10px;
+            border-radius: 7px;
+        }
+        button{
+            height: 30px;
+            width: 70px;
+
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="login" id="login">
+     <h1>Login Page</h1>
+         <div id="uid">
+            UserId: <input type="text" id="uname">
+
+         </div>
+        <div>
+            Pass : <input type="password" name="" id="pass">
+
+        </div>
+
+        <button id="btn" class="btn">LOGIN</button>
+
+    </div>
+    <script>
+
+        let uname=document.getElementById('uname')
+        
+        let pass=document.getElementById('pass')
+        let btn=document.getElementById('btn')
+        let addp=document.getElementById('login')
+        let cont=document.createElement('p')
+        cont.innerHTML='<p id="pp">enter valid uid</p>'
+        let con=document.createElement('p')
+        con.innerText='Enterpass'
+        console.log('dgjdk')
+        console.log(uname)
+        btn.onclick=function(){
+            let data=uname.value;
+            if(data.length<5){
+              addp.appendChild(cont)
+              console.log('dgjdk',data.length)}
+            else{
+            addp.appendChild(con)
+           
+            }
+            let pa=pass.value;
+            if(data.length!=0 && pa.length!=0 ){
+                let conn=document.createElement('p')
+                 conn.innerText='succes'
+                addp.appendChild(conn)
+            }
+            
+            
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html lang="en">
+    <head>
+        <style>
+           div {
+              text-align: center;
+           }
+           button {
+              width: 100px;
+              height: 30px;
+           }
+        </style>
+     </head>
+     <body>
+        <div id="div"> 
+           <button id="btn">Click</button>
+        </div>
+     </body>
+
+     <script>
+let btn=document.getElementById('btn')
+let one=document.createElement('p')
+let parent=document.getElementById('div')
+
+   function  getflag(){
+    let res=fetch('https://restcountries.com/v3.1/name/france')
+       res.then(function(respose){
+             let flag=respose.json()
+             //parent.innerHTML+=`<img src="${flag[0].flags.png}" alt="India Flag">`
+             console.log(flag)
+             return flag;
+       })
+       .then((data)=>{
+        console.log(data)
+      //  if (data.length > 0 && data[0].flags && data[0].flags.png) {
+        let img = document.createElement('img');
+                        img.src = data[0].flags.png;
+                        img.alt = "India Flag";
+        //}else
+       // console.log("no flag")
+
+                        parent.appendChild(img);
+       })
+       
+   }
+   btn.addEventListener('click',getflag)
+     </script>
+</html>

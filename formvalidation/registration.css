@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+}
+.registrationdiv{ 
+     height: 50vh;
+    width: 50vh;
+}
+.h1div{
+    padding: 20px 50px;
+    background-color: rgb(237, 235, 235);
+}
+.field{
+    
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    
+}
+.field input{
+     height: 30px;
+    width: 90%;
+    margin-left: 30px;
+    border-style: solid;
+    border-color: rgb(232, 227, 227);
+    
+    
+}
+.check{
+    display:inline;
+}
+form{
+  padding: 20px 30px;
+ background-color: white;
+}
+.field small{
+    position: absolute;
+    visibility:hidden;
+}
+.submit
+{
+    width: 200px;
+    height: 30px;
+    margin-left: 50px;
+    border-style: none;
+    background-color: rgb(17, 89, 245);
+    color: white;
+    font-size: 15px;
+}
+.field.error input{
+    border-color: red;
+}

@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let carmodels=['endivor','fortuner','volvo s90','inova','creta']
+
+//map method
+     let prices=carmodels.map(function(ele,index,carmodels){
+         if(ele==='endivor')
+            return 'ap'
+        else
+          return 'TS'
+     })
+  console.log(prices)
+   
+  //everty method wil return true if every element passes the condition
+  let ages=[20,30,88,77];
+  let check=ages.every(function(ele,index,ages){
+    return ele>=18;
+  })
+  console.log(check)
+
+  //spreadv operator  saparates the elements in array
+  console.log(ages);
+  console.log(...ages)
+    </script>
+</body>
+</html>
