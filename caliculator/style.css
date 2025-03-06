@@ -1,0 +1,43 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.maindiv{
+    width: 300px;
+    height: 500px;
+    box-shadow: 0 0 6px gray;
+
+}
+input{
+    width: 100%;
+    height: 140px;
+    border-style: none;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    text-align: right;
+    pointer-events: none;
+
+}
+button{
+    width: 45px;
+    height:45px;
+    margin: 6px;
+    border-radius: 5px;
+    border-style: none;
+
+}
+.buttonsdiv{
+    display: flex;
+    flex-wrap: wrap;
+}
+.btn-sys{
+    background-color: rgb(204, 204, 21);
+}
+.btn-equal{
+    background-color: rgb(53, 231, 53);
+}
+.btn-clear{
+    background-color: rgb(253, 8, 8);
+}
